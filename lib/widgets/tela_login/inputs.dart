@@ -7,7 +7,7 @@ class InputEmail extends StatelessWidget{
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
       child: TextField(
-        inputFormatters: [],
+        keyboardType: TextInputType.emailAddress,
         autofocus: true,
         style: TextStyle(fontSize: 24),
         decoration: InputDecoration(
