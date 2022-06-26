@@ -4,6 +4,16 @@ import 'package:flutter/widgets.dart';
 class Botao extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(onPressed: () {}, child: Text("Login"));
+    return ElevatedButton(
+      onPressed: () {},
+      style: ButtonStyle(
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18.0),
+          ),
+        ),
+      ),
+      child: Text("Login"),
+    );
   }
 }
