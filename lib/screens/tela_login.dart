@@ -4,7 +4,7 @@ import 'package:flutter/widgets.dart';
 import '../widgets/tela_login/botao.dart';
 import '../widgets/tela_login/botao_cadastro.dart';
 import '../widgets/tela_login/botao_texto.dart';
-import '../widgets/tela_login/input_box.dart';
+import '../widgets/tela_login/inputs.dart';
 
 class TelaLogin extends StatelessWidget{
   @override
@@ -21,8 +21,8 @@ class TelaLogin extends StatelessWidget{
               "assets/images/login.png",
               height: 250,
             ),
-            InputBox("Usuário", "fulano@email.com"),
-            InputBox("Senha", "****"),
+            InputEmail(),
+            InputSenha(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
