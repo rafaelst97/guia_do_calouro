@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:guia_do_calouro/screens/tela_login.dart';
 
+import 'screens/tela_cadastro.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TelaLogin(),
+      home: TelaCadastro(),
     );
   }
 }
