@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
+import '../widgets/genericos/inputs.dart';
 import '../widgets/tela_login/botao.dart';
 import '../widgets/tela_login/botao_cadastro.dart';
 import '../widgets/tela_login/botao_texto.dart';
-import '../widgets/tela_login/inputs.dart';
 
-class TelaLogin extends StatelessWidget{
+class TelaLogin extends StatelessWidget {
+  const TelaLogin({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Guia do Calouro"),
+        title: const Text("Guia do Calouro"),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -21,12 +21,12 @@ class TelaLogin extends StatelessWidget{
               "assets/images/login.png",
               height: 250,
             ),
-            InputEmail(),
-            InputSenha(),
+            const InputEmail("Usuário", "usuario@email.com", true),
+            const InputSenha("Senha", "****"),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                BotaoTexto("Esqueci minha senha"),
+              children: const [
+                BotaoCadastro(),
                 Botao(),
               ],
             ),
@@ -34,8 +34,8 @@ class TelaLogin extends StatelessWidget{
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  BotaoCadastro(),
+                children: const [
+                  BotaoTexto("Esqueci minha senha"),
                 ],
               ),
             )

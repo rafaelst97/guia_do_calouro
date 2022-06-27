@@ -1,39 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:guia_do_calouro/widgets/genericos/titulo.dart';
+import 'package:guia_do_calouro/widgets/tela_cadastro/botao_confirmar_cadastro.dart';
+import '../widgets/genericos/inputs.dart';
 
-import '../widgets/tela_login/botao.dart';
-import '../widgets/tela_login/botao_cadastro.dart';
-import '../widgets/tela_login/botao_texto.dart';
-import '../widgets/tela_login/inputs.dart';
+class TelaCadastro extends StatelessWidget {
+  const TelaCadastro({Key? key}) : super(key: key);
 
-class TelaCadastro extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Cadastro"),
+        title: const Text("Cadastro"),
       ),
       body: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            InputEmail(),
-            InputSenha(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                BotaoTexto("Esqueci minha senha"),
-                Botao(),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  BotaoCadastro(),
-                ],
-              ),
-            )
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: const [
+            Titulo("Cadastro"),
+            InputGenerico("Nome", "Fulano", true),
+            InputGenerico("Sobrenome", "de Tal", false),
+            InputEmail("E-mail", "fulano@email.com", false),
+            InputCpf(),
+            InputNumerico("Matrícula", "1234"),
+            InputSenha("Senha", "****"),
+            InputSenha("Confirmar senha", "****"),
+            BotaoCadastrar(),
           ],
         ),
       ),

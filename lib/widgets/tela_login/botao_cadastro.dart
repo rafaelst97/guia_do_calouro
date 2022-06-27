@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class BotaoCadastro extends StatelessWidget {
+  const BotaoCadastro({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
         onPressed: () {},
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.grey),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(18.0),
-                side: BorderSide(color: Colors.blue)),
+                side: const BorderSide(color: Colors.blue)),
           ),
         ),
-        child: Text("Cadastre-se",
-        style: TextStyle(color: Colors.black) ,));
+        child: const Text(
+          "Cadastre-se",
+        ));
   }
 }

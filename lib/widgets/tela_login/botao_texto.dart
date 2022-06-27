@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class BotaoTexto extends StatelessWidget {
-  late final String textoBotao;
+  final String textoBotao;
 
-  BotaoTexto(this.textoBotao);
+  const BotaoTexto(this.textoBotao, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Botao extends StatelessWidget {
+  const Botao({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -13,7 +14,7 @@ class Botao extends StatelessWidget {
           ),
         ),
       ),
-      child: Text("Login"),
+      child: const Text("Login"),
     );
   }
 }
