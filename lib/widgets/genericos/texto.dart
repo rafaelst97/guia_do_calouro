@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Texto extends StatelessWidget {
   final String texto;
 
+  // ignore: use_key_in_widget_constructors
   const Texto(this.texto);
 
   @override
