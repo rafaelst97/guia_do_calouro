@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guia_do_calouro/widgets/home/card_tempo.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,34 +14,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Card(
-              elevation: 5,
-              shadowColor: Colors.black,
-              color: Colors.blueAccent,
-              child: SizedBox(
-                width: double.infinity,
-                height: 200,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset(
-                      "assets/images/login.png",
-                      height: 150,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(30, 0, 120, 0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text("Nublado"),
-                          Text("28ºC"),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
+            CardTempo(),
           ],
         ),
       ),
