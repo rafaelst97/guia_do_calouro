@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:guia_do_calouro/widgets/genericos/titulo.dart';
 import 'package:guia_do_calouro/widgets/home/card_tempo.dart';
+import 'package:guia_do_calouro/widgets/home/cards_noticias.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,7 +16,10 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Titulo("Previsão do tempo"),
             CardTempo(),
+            Titulo("Notícias"),
+            CardNoticia(),
           ],
         ),
       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CardTempo extends StatelessWidget{
+class CardTempo extends StatelessWidget {
   const CardTempo({Key? key}) : super(key: key);
 
   @override
@@ -46,5 +46,4 @@ class CardTempo extends StatelessWidget{
       ),
     );
   }
-
 }
