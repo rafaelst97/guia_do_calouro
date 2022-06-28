@@ -14,6 +14,8 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Card(
+              elevation: 5,
+              shadowColor: Colors.black,
               color: Colors.blueAccent,
               child: SizedBox(
                 width: double.infinity,
