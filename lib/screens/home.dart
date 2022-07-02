@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+          children: const [
             Titulo("Previsão do tempo"),
             CardTempo(),
             Titulo("Notícias"),

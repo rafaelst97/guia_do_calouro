@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CardNoticia extends StatelessWidget {
+  const CardNoticia({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -24,11 +26,11 @@ class CardNoticia extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+              children: const [
                 SizedBox(
                   width: 228,
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                    padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
                     child: Flexible(
                       child: Text(
                         "Vagas de emprego",
@@ -45,12 +47,13 @@ class CardNoticia extends StatelessWidget {
                 SizedBox(
                   width: 228,
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(8.0),
                     child: Flexible(
                       child: Text(
-                          "Novas vagas de emprego estão surgindo na cidade, busque mais informações no SINE",
-                      overflow: TextOverflow.visible,
-                      textWidthBasis: TextWidthBasis.parent,),
+                        "Novas vagas de emprego estão surgindo na cidade, busque mais informações no SINE",
+                        overflow: TextOverflow.visible,
+                        textWidthBasis: TextWidthBasis.parent,
+                      ),
                     ),
                   ),
                 ),
