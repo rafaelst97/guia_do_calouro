@@ -25,7 +25,7 @@ class ListaConfiguracoes extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.lock),
-            title: TextoLista("Segurança"),
+            title: TextoLista("Privacidade"),
           ),
           ListTile(
             leading: Icon(Icons.info_outline),
