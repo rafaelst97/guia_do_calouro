@@ -27,14 +27,14 @@ class CardTempo extends StatelessWidget {
                   Text(
                     "Nublado",
                     style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.white70,
                         fontSize: 24,
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
                     "28ºC",
                     style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.white70,
                         fontSize: 24,
                         fontWeight: FontWeight.bold),
                   ),

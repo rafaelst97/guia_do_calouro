@@ -12,17 +12,21 @@ class CardNoticia extends StatelessWidget {
         height: 200,
         child: Row(
           children: [
-            Image.asset(
-              "assets/images/login.png",
-              width: 140,
-              height: 140,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                "assets/images/news.png",
+                width: 140,
+                height: 140,
+                alignment: Alignment.topCenter,
+              ),
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  width: 244,
+                  width: 228,
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
                     child: Flexible(
@@ -39,7 +43,7 @@ class CardNoticia extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 244,
+                  width: 228,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Flexible(
