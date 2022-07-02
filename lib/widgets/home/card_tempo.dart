@@ -16,7 +16,7 @@ class CardTempo extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Image.asset(
-              "assets/images/login.png",
+              "assets/images/clima.png",
               height: 150,
             ),
             Padding(

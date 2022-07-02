@@ -4,7 +4,7 @@ class CardNoticia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.white70,
+      color: Colors.white54,
       shadowColor: Colors.black,
       elevation: 20,
       child: SizedBox(
