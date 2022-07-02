@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:guia_do_calouro/widgets/configuracoes/lista_configuracoes.dart';
 import 'package:guia_do_calouro/widgets/genericos/titulo.dart';
+import '../widgets/tela_configuracoes/botao_encerrar.dart';
+import '../widgets/tela_configuracoes/lista_configuracoes.dart';
 
-import '../widgets/configuracoes/botao_encerrar.dart';
+
 
 class TelaConfiguracoes extends StatelessWidget {
+  const TelaConfiguracoes({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +16,7 @@ class TelaConfiguracoes extends StatelessWidget {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
+        children: const [
           Titulo("Configurações"),
           ListaConfiguracoes(),
           BotaoEncerrarSessao(),

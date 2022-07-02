@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:guia_do_calouro/screens/configuracoes.dart';
+import 'package:guia_do_calouro/screens/conta.dart';
 import 'package:guia_do_calouro/screens/home.dart';
 import 'package:guia_do_calouro/screens/login.dart';
 import 'package:guia_do_calouro/screens/recuperar_senha.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TelaConfiguracoes(),
+      home: TelaConta(),
     );
   }
 }

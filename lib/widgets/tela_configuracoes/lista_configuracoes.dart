@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:guia_do_calouro/widgets/configuracoes/texto_lista.dart';
+import 'package:guia_do_calouro/widgets/tela_configuracoes/texto_lista.dart';
 
 class ListaConfiguracoes extends StatelessWidget {
   const ListaConfiguracoes({Key? key}) : super(key: key);
