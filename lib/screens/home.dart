@@ -20,6 +20,7 @@ class HomePage extends StatelessWidget {
             CardTempo(),
             Titulo("Notícias"),
             CardNoticia(),
+            CardNoticia(),
           ],
         ),
       ),

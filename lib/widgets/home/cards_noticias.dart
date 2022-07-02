@@ -21,24 +21,34 @@ class CardNoticia extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
-                  child: Text(
-                    "Vagas de emprego",
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                        fontFamily: "Roboto",
-                        color: Colors.black,
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold),
+                SizedBox(
+                  width: 244,
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+                    child: Flexible(
+                      child: Text(
+                        "Vagas de emprego",
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                            fontFamily: "Roboto",
+                            color: Colors.black,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                      "Novas vagas de emprego estão surgindo na cidade, busque mais informações no SINE",
-                  overflow: TextOverflow.visible,
-                  textWidthBasis: TextWidthBasis.parent,),
+                SizedBox(
+                  width: 244,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Flexible(
+                      child: Text(
+                          "Novas vagas de emprego estão surgindo na cidade, busque mais informações no SINE",
+                      overflow: TextOverflow.visible,
+                      textWidthBasis: TextWidthBasis.parent,),
+                    ),
+                  ),
                 ),
               ],
             )
