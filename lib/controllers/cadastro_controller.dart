@@ -1,11 +1,10 @@
-class CadastroController{
-  String _nome = '';
-  String _sobrenome = '';
-  String _email = '';
-  String _cpf = '';
-  String _matricula = '';
-  String _senha = '';
+import 'package:flutter/material.dart';
 
-  CadastroController(this._nome, this._sobrenome, this._email, this._cpf,
-      this._matricula, this._senha);
+class CadastroController{
+  TextEditingController nome = new TextEditingController();
+  TextEditingController sobrenome = new TextEditingController();
+  TextEditingController email = new TextEditingController();
+  TextEditingController cpf = new TextEditingController();
+  TextEditingController matricula = new TextEditingController();
+  TextEditingController senha = new TextEditingController();
 }

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:guia_do_calouro/controllers/cadastro_controller.dart';
 
 class BotaoCadastrar extends StatelessWidget {
-  const BotaoCadastrar({Key? key}) : super(key: key);
+  CadastroController controller;
+
+  BotaoCadastrar(this.controller);
 
   @override
   Widget build(BuildContext context) {
@@ -9,6 +12,9 @@ class BotaoCadastrar extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 100),
       child: ElevatedButton(
         onPressed: () {
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text(controller.nome.text),
+          ));
         },
         style: ButtonStyle(
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(

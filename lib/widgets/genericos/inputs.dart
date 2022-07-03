@@ -1,25 +1,32 @@
 import 'package:brasil_fields/brasil_fields.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:guia_do_calouro/controllers/cadastro_controller.dart';
 
-class InputGenerico extends StatelessWidget {
+class InputGenerico extends StatefulWidget {
   final String label;
   final String hint;
   final bool focus;
+  TextEditingController controller;
 
-  const InputGenerico(this.label, this.hint, this.focus, {Key? key})
-      : super(key: key);
+  InputGenerico(this.label, this.hint, this.focus, this.controller);
 
+  @override
+  State<InputGenerico> createState() => _InputGenericoState();
+}
+
+class _InputGenericoState extends State<InputGenerico> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
       child: TextFormField(
-        autofocus: focus,
+        controller: widget.controller,
+        autofocus: widget.focus,
         style: const TextStyle(fontSize: 24),
         decoration: InputDecoration(
-          labelText: label,
-          hintText: hint,
+          labelText: widget.label,
+          hintText: widget.hint,
         ),
       ),
     );
@@ -52,15 +59,16 @@ class InputEmail extends StatelessWidget {
   final String label;
   final String hint;
   final bool focus;
+  TextEditingController controller;
 
-  // ignore: use_key_in_widget_constructors
-  const InputEmail(this.label, this.hint, this.focus);
+  InputEmail(this.label, this.hint, this.focus, this.controller);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
       child: TextFormField(
+        controller: controller,
         keyboardType: TextInputType.emailAddress,
         style: const TextStyle(fontSize: 24),
         autofocus: focus,
@@ -74,13 +82,16 @@ class InputEmail extends StatelessWidget {
 }
 
 class InputCpf extends StatelessWidget {
-  const InputCpf({Key? key}) : super(key: key);
+  TextEditingController controller;
+
+  InputCpf(this.controller);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
       child: TextFormField(
+        controller: controller,
         inputFormatters: [
           FilteringTextInputFormatter.digitsOnly,
           CpfInputFormatter(),

@@ -10,7 +10,7 @@ class BotaoCadastro extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const TelaCadastro()),
+            MaterialPageRoute(builder: (context) => TelaCadastro()),
           );
         },
         style: ButtonStyle(

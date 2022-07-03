@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:guia_do_calouro/controllers/cadastro_controller.dart';
 import '../widgets/genericos/inputs.dart';
 import '../widgets/tela_login/botao.dart';
 import '../widgets/tela_login/botao_cadastro.dart';
 import '../widgets/tela_login/botao_texto.dart';
 
-class TelaLogin extends StatelessWidget {
-  const TelaLogin({Key? key}) : super(key: key);
+class TelaLogin extends StatefulWidget {
+  CadastroController controller = new CadastroController();
 
+  @override
+  State<TelaLogin> createState() => _TelaLoginState();
+}
+
+class _TelaLoginState extends State<TelaLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +27,7 @@ class TelaLogin extends StatelessWidget {
               "assets/images/login.png",
               height: 250,
             ),
-            const InputEmail("Usuário", "usuario@email.com", false),
+            InputEmail("Usuário", "usuario@email.com", false, widget.controller.email),
             const InputSenha("Senha", "****"),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
