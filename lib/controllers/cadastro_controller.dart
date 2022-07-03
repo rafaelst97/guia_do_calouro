@@ -11,7 +11,19 @@ class CadastroController {
   TextEditingController senha = new TextEditingController();
   TextEditingController confirmacaoSenha = new TextEditingController();
 
-  salvar() {
+  salvar(BuildContext context) {
+    if (nome.text == "" ||
+        sobrenome.text == "" ||
+        email.text == "" ||
+        cpf.text == "" ||
+        matricula.text == "" ||
+        senha.text == "" ||
+        confirmacaoSenha.text == "") {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text("Preencha todos os campos!"),
+      ));
+    }
+
     ref.add({
       "nome": nome.text,
       "sobrenome": sobrenome.text,
