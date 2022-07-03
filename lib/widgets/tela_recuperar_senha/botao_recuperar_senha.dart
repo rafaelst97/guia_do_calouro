@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:guia_do_calouro/controllers/esqueci_senha_controller.dart';
 
 class BotaoRecuperarSenha extends StatelessWidget {
-  const BotaoRecuperarSenha({Key? key}) : super(key: key);
+  RecuperacaoSenhaController senhaController;
+
+  BotaoRecuperarSenha(this.senhaController);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 100),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          senhaController.recuperaSenha(context);
+        },
         style: ButtonStyle(
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(

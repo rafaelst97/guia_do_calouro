@@ -27,7 +27,7 @@ class CadastroController {
         content: Text("Senhas não conferem!"),
       ));
     } else {
-      ref.add({
+      ref.doc(email.text).set({
         "nome": nome.text,
         "sobrenome": sobrenome.text,
         "email": email.text,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guia_do_calouro/screens/recuperar_senha.dart';
 
 class BotaoTexto extends StatelessWidget {
   final String textoBotao;
@@ -7,6 +8,13 @@ class BotaoTexto extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(onPressed: () {}, child: Text(textoBotao));
+    return TextButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => TelaRecuperacaoSenha()),
+          );
+        },
+        child: Text(textoBotao));
   }
 }
