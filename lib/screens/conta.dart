@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:guia_do_calouro/controllers/conta_controller.dart';
 import 'package:guia_do_calouro/widgets/genericos/titulo.dart';
 import 'package:guia_do_calouro/widgets/tela_conta/botao_atualiza_cadastro.dart';
+import 'package:guia_do_calouro/widgets/tela_conta/botao_excluir_conta.dart';
 
 import '../widgets/genericos/inputs.dart';
 
@@ -39,6 +40,7 @@ class _TelaContaState extends State<TelaConta> {
             InputSenha("Senha", "****", widget.controller.senha),
             InputSenha("Confirmar senha", "****", widget.controller.confirmacaoSenha),
             BotaoAtualizaCadastro(widget.controller, widget.email),
+            BotaoExcluirConta(widget.controller, widget.email),
           ],
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:guia_do_calouro/screens/login.dart';
 
 class ContaController {
   CollectionReference ref = FirebaseFirestore.instance.collection("usuarios");
@@ -11,7 +12,7 @@ class ContaController {
   TextEditingController senha = TextEditingController();
   TextEditingController confirmacaoSenha = TextEditingController();
 
-  atualizar(BuildContext context, String emailLogado){
+  atualizar(BuildContext context, String emailLogado) {
     if (nome.text == "" ||
         sobrenome.text == "" ||
         email.text == "" ||
@@ -37,5 +38,12 @@ class ContaController {
       });
       Navigator.pop(context);
     }
+  }
+
+  excluir(BuildContext context, String emailLogado) {
+    ref.doc(emailLogado).delete().then((value) => {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => TelaLogin()))
+        });
   }
 }
