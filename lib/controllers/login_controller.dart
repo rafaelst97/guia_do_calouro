@@ -26,6 +26,10 @@ class LoginController {
         context,
         MaterialPageRoute(builder: (context) => HomePage()),
       );
+    }else{
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text("Usuário ou senha inválidos"),
+      ));
     }
   }
 }
