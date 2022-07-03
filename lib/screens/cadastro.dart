@@ -3,9 +3,14 @@ import 'package:guia_do_calouro/widgets/genericos/titulo.dart';
 import 'package:guia_do_calouro/widgets/tela_cadastro/botao_confirmar_cadastro.dart';
 import '../widgets/genericos/inputs.dart';
 
-class TelaCadastro extends StatelessWidget {
+class TelaCadastro extends StatefulWidget {
   const TelaCadastro({Key? key}) : super(key: key);
 
+  @override
+  State<TelaCadastro> createState() => _TelaCadastroState();
+}
+
+class _TelaCadastroState extends State<TelaCadastro> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +22,7 @@ class TelaCadastro extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: const [
             Titulo("Cadastro"),
-            InputGenerico("Nome", "Fulano", true),
+            InputGenerico("Nome", "Fulano", false),
             InputGenerico("Sobrenome", "de Tal", false),
             InputEmail("E-mail", "fulano@email.com", false),
             InputCpf(),

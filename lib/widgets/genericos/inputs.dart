@@ -14,7 +14,7 @@ class InputGenerico extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-      child: TextField(
+      child: TextFormField(
         autofocus: focus,
         style: const TextStyle(fontSize: 24),
         decoration: InputDecoration(
@@ -36,7 +36,7 @@ class InputSenha extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-      child: TextField(
+      child: TextFormField(
         obscureText: true,
         style: const TextStyle(fontSize: 24),
         decoration: InputDecoration(
@@ -60,7 +60,7 @@ class InputEmail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-      child: TextField(
+      child: TextFormField(
         keyboardType: TextInputType.emailAddress,
         style: const TextStyle(fontSize: 24),
         autofocus: focus,
@@ -80,7 +80,7 @@ class InputCpf extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-      child: TextField(
+      child: TextFormField(
         inputFormatters: [
           FilteringTextInputFormatter.digitsOnly,
           CpfInputFormatter(),
@@ -106,7 +106,7 @@ class InputNumerico extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-      child: TextField(
+      child: TextFormField(
         keyboardType: TextInputType.number,
         style: const TextStyle(fontSize: 24),
         decoration: InputDecoration(

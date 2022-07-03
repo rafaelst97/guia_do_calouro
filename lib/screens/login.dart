@@ -21,7 +21,7 @@ class TelaLogin extends StatelessWidget {
               "assets/images/login.png",
               height: 250,
             ),
-            const InputEmail("Usuário", "usuario@email.com", true),
+            const InputEmail("Usuário", "usuario@email.com", false),
             const InputSenha("Senha", "****"),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

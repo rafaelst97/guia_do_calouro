@@ -8,7 +8,8 @@ class BotaoCadastrar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 100),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+        },
         style: ButtonStyle(
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(

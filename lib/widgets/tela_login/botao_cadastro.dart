@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guia_do_calouro/screens/cadastro.dart';
 
 class BotaoCadastro extends StatelessWidget {
   const BotaoCadastro({Key? key}) : super(key: key);
@@ -6,7 +7,12 @@ class BotaoCadastro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const TelaCadastro()),
+          );
+        },
         style: ButtonStyle(
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
