@@ -22,15 +22,20 @@ class CadastroController {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: Text("Preencha todos os campos!"),
       ));
+    } else if (senha.text != confirmacaoSenha.text) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text("Senhas não conferem!"),
+      ));
+    } else {
+      ref.add({
+        "nome": nome.text,
+        "sobrenome": sobrenome.text,
+        "email": email.text,
+        "cpf": cpf.text,
+        "matricula": matricula.text,
+        "senha": senha.text
+      });
+      Navigator.pop(context);
     }
-
-    ref.add({
-      "nome": nome.text,
-      "sobrenome": sobrenome.text,
-      "email": email.text,
-      "cpf": cpf.text,
-      "matricula": matricula.text,
-      "senha": senha.text
-    });
   }
 }
