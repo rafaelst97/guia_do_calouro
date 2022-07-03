@@ -6,7 +6,9 @@ import '../widgets/tela_configuracoes/lista_configuracoes.dart';
 
 
 class TelaConfiguracoes extends StatelessWidget {
-  const TelaConfiguracoes({Key? key}) : super(key: key);
+  String email = "";
+
+  TelaConfiguracoes(this.email);
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +18,9 @@ class TelaConfiguracoes extends StatelessWidget {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: const [
+        children: [
           Titulo("Configurações"),
-          ListaConfiguracoes(),
+          ListaConfiguracoes(email),
           BotaoEncerrarSessao(),
         ],
       ),

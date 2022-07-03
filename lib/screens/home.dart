@@ -5,7 +5,9 @@ import '../widgets/tela_home/card_tempo.dart';
 import '../widgets/tela_home/cards_noticias.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  String email = "";
+
+  HomePage(this.email);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         actions: [
           PopupMenuButton<int>(
-            onSelected: (item) => onSelected(context, item),
+            onSelected: (item) => onSelected(context, item, email),
             itemBuilder: (context) =>
                 [PopupMenuItem<int>(value: 0, child: Text("Configurações"))],
           )
@@ -35,10 +37,10 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  onSelected(BuildContext context, int item) {
+  onSelected(BuildContext context, int item, String email) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => TelaConfiguracoes()),
+      MaterialPageRoute(builder: (context) => TelaConfiguracoes(email)),
     );
   }
 }

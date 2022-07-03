@@ -24,7 +24,7 @@ class LoginController {
     if (emailValido == true && senhaValida == true){
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => HomePage()),
+        MaterialPageRoute(builder: (context) => HomePage(email.text)),
       );
     }else{
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
