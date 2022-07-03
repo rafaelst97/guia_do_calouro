@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:guia_do_calouro/controllers/login_controller.dart';
 
 class Botao extends StatelessWidget {
-  const Botao({Key? key}) : super(key: key);
+  LoginController controller;
+
+  Botao(this.controller);
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        controller.logar(context);
+      },
       style: ButtonStyle(
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(

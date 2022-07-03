@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:guia_do_calouro/controllers/cadastro_controller.dart';
+import 'package:guia_do_calouro/controllers/login_controller.dart';
 import '../widgets/genericos/inputs.dart';
 import '../widgets/tela_login/botao.dart';
 import '../widgets/tela_login/botao_cadastro.dart';
 import '../widgets/tela_login/botao_texto.dart';
 
 class TelaLogin extends StatefulWidget {
-  CadastroController controller = new CadastroController();
+  LoginController controller = new LoginController();
 
   @override
   State<TelaLogin> createState() => _TelaLoginState();
@@ -31,9 +32,9 @@ class _TelaLoginState extends State<TelaLogin> {
             InputSenha("Senha", "****", widget.controller.senha),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
+              children: [
                 BotaoCadastro(),
-                Botao(),
+                Botao(widget.controller),
               ],
             ),
             Padding(
