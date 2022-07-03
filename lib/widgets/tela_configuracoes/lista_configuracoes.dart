@@ -25,10 +25,30 @@ class _ListaConfiguracoesState extends State<ListaConfiguracoes> {
           ListTile(
             leading: Icon(Icons.notifications),
             title: TextoLista("Notificações"),
+            onTap: (){
+              ref.doc("notificacoes").get().then((snapshot) => {
+                snapshot.data().forEach((key, value) {
+
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: Text(value),
+                  ));
+                })
+              });
+            },
           ),
           ListTile(
             leading: Icon(Icons.security),
             title: TextoLista("Segurança"),
+            onTap: (){
+              ref.doc("seguranca").get().then((snapshot) => {
+                snapshot.data().forEach((key, value) {
+
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: Text(value),
+                  ));
+                })
+              });
+            },
           ),
           ListTile(
             leading: Icon(Icons.supervisor_account_rounded),
@@ -43,6 +63,16 @@ class _ListaConfiguracoesState extends State<ListaConfiguracoes> {
           ListTile(
             leading: Icon(Icons.lock),
             title: TextoLista("Privacidade"),
+            onTap: (){
+              ref.doc("privacidade").get().then((snapshot) => {
+                snapshot.data().forEach((key, value) {
+
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: Text(value),
+                  ));
+                })
+              });
+            },
           ),
           ListTile(
             leading: Icon(Icons.info_outline),

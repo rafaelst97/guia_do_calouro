@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guia_do_calouro/screens/login.dart';
 
 class BotaoEncerrarSessao extends StatelessWidget {
   const BotaoEncerrarSessao({Key? key}) : super(key: key);
@@ -8,7 +9,12 @@ class BotaoEncerrarSessao extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => TelaLogin()),
+          );
+        },
         style: ButtonStyle(
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(

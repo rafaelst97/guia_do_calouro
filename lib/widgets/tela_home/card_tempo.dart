@@ -20,12 +20,12 @@ class CardTempo extends StatelessWidget {
               height: 150,
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 100, 0),
+              padding: const EdgeInsets.fromLTRB(0, 0, 70, 0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
                   Text(
-                    "Nublado",
+                    "Chuvas leves",
                     style: TextStyle(
                         color: Colors.white70,
                         fontSize: 24,
