@@ -10,3 +10,7 @@ Nas configurações as mensagens que são exibidas em forma de Toast são trazid
 ## Ambiente
 
 Esta aplicação foi desenvolvida utilizando o ambiente de um <strong>Pixel 4 com a API 30 instalada no mesmo</strong>
+
+## Release
+
+<a href="https://github.com/rafaelst97/guia_do_calouro/raw/master/RELEASE/app-release.apk">Clique aqui para baixar o .APK</a>
