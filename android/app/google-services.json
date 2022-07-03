@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "982794463039",
+    "firebase_url": "https://guiadocalouro-8df99-default-rtdb.firebaseio.com",
+    "project_id": "guiadocalouro-8df99",
+    "storage_bucket": "guiadocalouro-8df99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982794463039:android:70cc982b6297eb8dbb558a",
+        "android_client_info": {
+          "package_name": "br.univali.guia_do_calouro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982794463039-3jares82npk0bmjlmlf03rudvvst863j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3EZ6tmMcWJvWhXoWEn_N4F1eWKSz2eiw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982794463039-3jares82npk0bmjlmlf03rudvvst863j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "982794463039-2ft77l9v8oufvhd0q8q2kv2en7ta79d1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.univali.guiaDoCalouro"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

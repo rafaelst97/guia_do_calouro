@@ -12,9 +12,7 @@ class BotaoCadastrar extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 100),
       child: ElevatedButton(
         onPressed: () {
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-            content: Text(controller.nome.text),
-          ));
+          controller.salvar();
         },
         style: ButtonStyle(
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(

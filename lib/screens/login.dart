@@ -28,7 +28,7 @@ class _TelaLoginState extends State<TelaLogin> {
               height: 250,
             ),
             InputEmail("Usuário", "usuario@email.com", false, widget.controller.email),
-            const InputSenha("Senha", "****"),
+            InputSenha("Senha", "****", widget.controller.senha),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
