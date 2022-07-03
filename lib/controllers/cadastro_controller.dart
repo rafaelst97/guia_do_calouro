@@ -7,4 +7,5 @@ class CadastroController{
   TextEditingController cpf = new TextEditingController();
   TextEditingController matricula = new TextEditingController();
   TextEditingController senha = new TextEditingController();
+  TextEditingController confirmacaoSenha = new TextEditingController();
 }

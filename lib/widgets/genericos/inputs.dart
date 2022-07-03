@@ -33,22 +33,29 @@ class _InputGenericoState extends State<InputGenerico> {
   }
 }
 
-class InputSenha extends StatelessWidget {
+class InputSenha extends StatefulWidget {
   final String label;
   final String hint;
+  TextEditingController controller;
 
-  const InputSenha(this.label, this.hint, {Key? key}) : super(key: key);
+  InputSenha(this.label, this.hint, this.controller);
 
+  @override
+  State<InputSenha> createState() => _InputSenhaState();
+}
+
+class _InputSenhaState extends State<InputSenha> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
       child: TextFormField(
+        controller: widget.controller,
         obscureText: true,
         style: const TextStyle(fontSize: 24),
         decoration: InputDecoration(
-          labelText: label,
-          hintText: hint,
+          labelText: widget.label,
+          hintText: widget.hint,
         ),
       ),
     );
@@ -81,17 +88,22 @@ class InputEmail extends StatelessWidget {
   }
 }
 
-class InputCpf extends StatelessWidget {
+class InputCpf extends StatefulWidget {
   TextEditingController controller;
 
   InputCpf(this.controller);
 
   @override
+  State<InputCpf> createState() => _InputCpfState();
+}
+
+class _InputCpfState extends State<InputCpf> {
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
       child: TextFormField(
-        controller: controller,
+        controller: widget.controller,
         inputFormatters: [
           FilteringTextInputFormatter.digitsOnly,
           CpfInputFormatter(),
@@ -107,22 +119,29 @@ class InputCpf extends StatelessWidget {
   }
 }
 
-class InputNumerico extends StatelessWidget {
+class InputNumerico extends StatefulWidget {
   final String label;
   final String hint;
+  TextEditingController controller;
 
-  const InputNumerico(this.label, this.hint, {Key? key}) : super(key: key);
+  InputNumerico(this.label, this.hint, this.controller);
 
+  @override
+  State<InputNumerico> createState() => _InputNumericoState();
+}
+
+class _InputNumericoState extends State<InputNumerico> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
       child: TextFormField(
+        controller: widget.controller,
         keyboardType: TextInputType.number,
         style: const TextStyle(fontSize: 24),
         decoration: InputDecoration(
-          labelText: label,
-          hintText: hint,
+          labelText: widget.label,
+          hintText: widget.hint,
         ),
       ),
     );
